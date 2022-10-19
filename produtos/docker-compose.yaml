@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    container_name: postgres_container
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=db_produtos_spring
+    volumes:
+      - /var/lib/postgresql/data
